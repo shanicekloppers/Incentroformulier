@@ -15,8 +15,8 @@
 		</header>
 
 		<form action="" method="post">
-			<label for="surname">Voornaam: <br />
-				<input type="text" name="voornaam" required="required" size="20" maxlength="30" /> </label><br />
+			<label for="surname">Voorletters: <br />
+				<input type="text" name="voorletters" required="required" size="20" maxlength="30" /> </label><br />
 			
 			<label for="name">Tussenvoegsel: <br />
 				<input type="text" name="tussenvoegsel" size="15" maxlength="30" /> </label><br />
@@ -25,14 +25,14 @@
 				<input type="text" name="achternaam" required="required" size="20" maxlength="30" /> </label><br />
 			
 			<label for="postcode">Postcode: <br />
-				<input type="text" name="postcode" size="15" maxlength="30" /> </label><br />
+				<input type="text" name="postcode" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" size="15" maxlength="30" /> </label><br />
 			
 			<label for="Huisnummer">Huisnummer: <br />
-				<input type="text" name="Huisnummer" size="15" maxlength="30" /> </label><br />
+				<input type="number" name="Huisnummer" size="15" maxlength="30" /> </label><br />
 			
 			<!-- Straatnaam en plaats ophalen -->
 			<label for="email">E-mail: <br />
-				<input type="text" name="email" size="20" maxlength="30" /> </label><br />
+				<input type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" size="20" maxlength="30" /> </label><br />
 			<input type="submit" value="Verzenden">
 		</form>
 
