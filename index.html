@@ -3,9 +3,10 @@
 
 	<head>
   		<meta charset="UTF-8">
-  		<meta name="viewport" content="width=device-width, user-scalable=0;">
+  		<meta name="viewport" content="width=device-width, user-scalable=0">
   		<title>Incentro Formulier</title>
 		<link type ="text/css" rel="stylesheet" href="styles.css">
+		<script src="script.js"></script>
 	</head>
 
 	<body>
@@ -14,25 +15,25 @@
 
 		</header>
 
-		<form action="" method="post">
+		<form action="/action_page.php" method="post" id="form">
 			<label for="surname">Voorletters: <br />
-				<input type="text" name="voorletters" required="required" size="20" maxlength="30" /> </label><br />
+				<input type="text" name="voorletters" placeholder="A." required="required" size="20" maxlength="5" /> </label><br />
 			
 			<label for="name">Tussenvoegsel: <br />
-				<input type="text" name="tussenvoegsel" size="15" maxlength="30" /> </label><br />
+				<input type="text" name="tussenvoegsel" placeholder="van der" size="15" maxlength="10" /> </label><br />
 			
 			<label for="lastname">Achternaam: <br />
-				<input type="text" name="achternaam" required="required" size="20" maxlength="30" /> </label><br />
+				<input type="text" name="achternaam" placeholder="Laan" required="required" size="20" maxlength="30" /> </label><br />
 			
 			<label for="postcode">Postcode: <br />
-				<input type="text" name="postcode" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" size="15" maxlength="30" /> </label><br />
+				<input type="text" name="postcode" placeholder="1234AB" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" size="15" maxlength="6" /> </label><br />
 			
-			<label for="Huisnummer">Huisnummer: <br />
-				<input type="number" name="Huisnummer" size="15" maxlength="30" /> </label><br />
+			<label for="quantity">Huisnummer: <br />
+				<input type="number" minlength="1" maxlength="5" placeholder="123" size="32" /> </label><br />
 			
 			<!-- Straatnaam en plaats ophalen -->
 			<label for="email">E-mail: <br />
-				<input type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" size="20" maxlength="30" /> </label><br />
+				<input type="email" name="email" placeholder="a.vanderlaan@voorbeeld.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" maxlength="30" /> </label><br /><br />
 			<input type="submit" value="Verzenden">
 		</form>
 
